@@ -219,7 +219,7 @@
 
   <div class="container">
     <header>
-      <div class="badge-top">Architecture & Transparence</div>
+     
       <h1>Algorithmes & API Utilisées</h1>
       <div class="subtitle">Documentation des sources de données et de l'algorithme pédagogique de mémorisation</div>
     </header>
@@ -236,15 +236,16 @@
         Pour optimiser le temps d'apprentissage du Saint Coran et éviter l'oubli, l'application intègre l'algorithme <strong>SuperMemo-2 (SM-2)</strong> basé sur la courbe de l'oubli d'Hermann Ebbinghaus.
       </p>
       <p>
-        Chaque page et verset possède son propre <strong>Facteur de Facilité (EF)</strong> et un <strong>Intervalle de Révision (I)</strong> recalculés automatiquement après chaque séance selon votre auto-évaluation :
+        Chaque page possède son propre <strong>Facteur de Facilité (EF)</strong> et un <strong>Intervalle de Révision (I)</strong> recalculés automatiquement après chaque séance selon votre auto-évaluation et le nombre de révisions cumulés pour la page en question :
       </p>
 
       <div class="sm2-badge-grid">
         <div class="sm2-pill pill-again">🔴 À revoir (Intervalle réinitialisé à 1 jour)</div>
-        <div class="sm2-pill pill-hard">🟠 Difficile (Progression courte)</div>
+        <div class="sm2-pill pill-hard">🟠 Difficile (Intervalle court)</div>
         <div class="sm2-pill pill-good">🟢 Bien (Intervalle régulier)</div>
-        <div class="sm2-pill pill-perfect">⭐ Parfait (Espacement maximal &gt; 90 jours)</div>
+        <div class="sm2-pill pill-perfect">⭐ Parfait (Intervalle large)</div>
       </div>
+      <p>La date des notifications de révisions que vous recevez dépend des intervalles calculés pour chaque page.</p>
     </div>
 
     <!-- SECTION 2 : API & SOURCES DE DONNÉES -->
@@ -311,7 +312,8 @@
         <h2>Interruption Respectueuse des Appels</h2>
       </div>
       <p>
-        L'application utilise les flux matériels du système Android (<code>PhoneState</code> et <code>RealVolume</code>) pour neutraliser la sonnerie du téléphone dès la détection d'un appel entrant afin de permettre au verset de s'achever sans coupure abrupte de la parole divine.
+        L'application utilise les flux matériels du système Android (<code>PhoneState</code> et <code>RealVolume</code>) pour neutraliser la sonnerie du téléphone dès la détection d'un appel entrant afin de permettre au verset en cours de s'achever sans coupure abrupte de la parole divine. <br>
+        L'audio est mis en pause et la sonnerie du téléphone est rétablie.
       </p>
     </div>
 
