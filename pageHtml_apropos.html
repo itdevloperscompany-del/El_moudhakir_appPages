@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>À propos — El Moudhakir (الـمُـدَّكِـر)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-cream: #FBF8F2;
+      --card-bg: #FFFFFF;
+      --primary: #0F766E;
+      --primary-light: #CCFBF1;
+      --primary-dark: #115E59;
+      --gold: #D97706;
+      --gold-light: #FEF3C7;
+      --text-main: #1F2937;
+      --text-muted: #4B5563;
+      --border: #E5E7EB;
+      --radius: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-cream);
+      color: var(--text-main);
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.6;
+      padding: 24px 16px;
+    }
+
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .logo-badge {
+      width: 76px;
+      height: 76px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      border-radius: 50%;
+      margin: 0 auto 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 25px rgba(15, 118, 110, 0.25);
+    }
+
+    .logo-badge svg {
+      width: 38px;
+      height: 38px;
+      fill: #FFFFFF;
+    }
+
+    h1 {
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--primary-dark);
+      letter-spacing: -0.5px;
+      margin-bottom: 6px;
+    }
+
+    .arabic-title {
+      font-family: 'Amiri', serif;
+      font-size: 30px;
+      color: var(--gold);
+      margin-bottom: 8px;
+      line-height: 1.2;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      padding: 22px;
+      margin-bottom: 18px;
+      border: 1px solid var(--border);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .icon-box {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: var(--primary-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary);
+    }
+
+    .icon-box.gold {
+      background: var(--gold-light);
+      color: var(--gold);
+    }
+
+    h2 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    p {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+      line-height: 1.6;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    .verse-quote {
+      background: #F0FDF4;
+      border-right: 4px solid var(--primary);
+      padding: 16px;
+      border-radius: 12px;
+      margin: 14px 0;
+      text-align: right;
+    }
+
+    .verse-quote .arabic {
+      font-family: 'Amiri', serif;
+      font-size: 22px;
+      color: var(--primary-dark);
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    .verse-quote .ref {
+      font-size: 12px;
+      color: var(--gold);
+      font-weight: 700;
+      text-align: left;
+    }
+
+    .features-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .features-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 13.5px;
+      color: var(--text-main);
+    }
+
+    .bullet {
+      width: 7px;
+      height: 7px;
+      background: var(--primary);
+      border-radius: 50%;
+      margin-top: 8px;
+      flex-shrink: 0;
+    }
+
+    .gesture-box {
+      background: #F8FAFC;
+      border: 1px dashed #CBD5E1;
+      border-radius: 12px;
+      padding: 12px 14px;
+      margin-top: 8px;
+    }
+
+    .gesture-tag {
+      font-weight: 700;
+      color: var(--primary);
+      display: inline-block;
+      margin-bottom: 2px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 24px 0 12px;
+      font-size: 12.5px;
+      color: var(--text-muted);
+    }
+
+    .contact-link {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .contact-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <div class="logo-badge">
+        <svg viewBox="0 0 24 24"><path d="M12 3L1 9L12 15L21 10.09V17H23V9M5 13.18V17.18L12 21L19 17.18V13.18L12 17L5 13.18Z"/></svg>
+      </div>
+      <div class="arabic-title">الـمُـدَّكِـر</div>
+      <h1>El Moudhakir</h1>
+      <div class="subtitle">Votre compagnon quotidien de mémorisation & révision du Saint Coran</div>
+    </header>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="icon-box">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"/></svg>
+        </div>
+        <h2>Notre Mission</h2>
+      </div>
+      <p>
+        <strong>El Moudhakir</strong> (tiré du verset 17 de la Sourate Al-Qamar) a été conçu pour offrir aux étudiants, mémorisateurs (Huffadh) et lecteurs du Coran un outil moderne, précis et respectueux du texte sacré.
+      </p>
+      
+      <div class="verse-quote">
+        <span class="arabic">﴿ وَلَقَدْ يَسَّرْنَا الْقُرْآنَ لِلذِّكْرِ فَهَلْ مِن مُّدَّكِرٍ ﴾</span>
+        <div class="ref">Sourate Al-Qamar • Verset 17</div>
+      </div>
+
+      <p>
+        L'application propose les deux lectures authentiques majeures : <strong>Hafs 'an 'Asim</strong> (Moushaf de Médine) et <strong>Warch 'an Nafi'</strong> (Moushaf Maghrébin), avec audio verset par verset et suivi dynamique du texte.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="icon-box gold">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <h2>Fonctionnalités Clés & Raccourcis Gestuels</h2>
+      </div>
+
+      <ul class="features-list">
+        <li>
+          <div class="bullet"></div>
+          <div><strong>Rappels personnalisés selon votre degré de maitrise de la page :</strong> Les dates optimalesdes rappels sont calculées selon l'algorithme de répétition espacée SM 2 (Super Memo 2) .</div>
+        </li>
+        <li>
+          <div class="bullet"></div>
+          <div><strong>Récitation Verset / Page / Sourate :</strong> Récitation audio de haute qualité avec sélection du récitateur et suivi surligné.</div>
+        </li>
+        <li>
+          <div class="bullet"></div>
+          <div><strong>Répétitions personnalisées :</strong> Boucles de répétitions par verset ou par page pour consolider la mémoire auditive.</div>
+        </li>
+        <li>
+          <div class="bullet"></div>
+          <div><strong>Mode Récitation Masquée (Hifdh) :</strong> Cliquez sur l'icône œil en haut pour cacher les versets et réciter de mémoire avant de révéler.</div>
+        </li>
+      </ul>
+
+      <div class="gesture-box" style="margin-top: 14px;">
+        <span class="gesture-tag">👆 Double-clic sur l'écran d'étude :</span>
+        <div style="font-size: 13px; color: var(--text-muted);">Agrandit ou rétrécit instantanément la taille de la calligraphie arabe selon votre confort visuel.</div>
+      </div>
+
+      <div class="gesture-box">
+        <span class="gesture-tag">🔁 Appui long sur le bouton Loop :</span>
+        <div style="font-size: 13px; color: var(--text-muted);">Ouvre la fenêtre de choix pour sélectionner précisément le nombre de répétitions (3×, 5×, 7×, 10×...).</div>
+      </div>
+
+      <div class="gesture-box">
+        <span class="gesture-tag">📑 Appui long sur une Sourate ou Page :</span>
+        <div style="font-size: 13px; color: var(--text-muted);">Change directement son statut en « Maîtrisée » (> 90 jours) ou « Non commencée ».</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="icon-box">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
+        </div>
+        <h2>Confidentialité & Données</h2>
+      </div>
+      <p>
+        Votre progression spirituelle vous appartient. <strong>El Moudhakir</strong> ne commercialise aucune donnée personnelle. Vos statistiques de révision et vos réglages sont conservés de manière sécurisée et privée.
+      </p>
+    </div>
+
+    <footer>
+      <p>© 2026 IT Developers Company. Tous droits réservés.</p>
+      <p style="margin-top: 4px;">Contact & Assistance : <a class="contact-link" href="mailto:it.devlopers.company@gmail.com">it.devlopers.company@gmail.com</a></p>
+    </footer>
+  </div>
+
+</body>
+</html>
