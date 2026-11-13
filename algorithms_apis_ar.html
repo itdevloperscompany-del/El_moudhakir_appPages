@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الخوارزميات وواجهات البرمجة المستخدمة — El Moudhakir</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-cream: #FBF8F2;
+      --card-bg: #FFFFFF;
+      --primary: #0F766E;
+      --primary-light: #CCFBF1;
+      --primary-dark: #115E59;
+      --gold: #D97706;
+      --gold-light: #FEF3C7;
+      --blue: #0284C7;
+      --blue-light: #E0F2FE;
+      --text-main: #1F2937;
+      --text-muted: #4B5563;
+      --border: #E5E7EB;
+      --radius: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-cream);
+      color: var(--text-main);
+      font-family: 'Tajawal', 'Segoe UI', Tahoma, -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      padding: 24px 16px;
+    }
+
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    header {
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--primary-dark);
+      margin-bottom: 6px;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      padding: 22px;
+      margin-bottom: 18px;
+      border: 1px solid var(--border);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .icon-box {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: var(--blue-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--blue);
+      flex-shrink: 0;
+    }
+
+    .icon-box.green {
+      background: var(--primary-light);
+      color: var(--primary);
+    }
+
+    .icon-box.gold {
+      background: var(--gold-light);
+      color: var(--gold);
+    }
+
+    h2 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    p {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+      line-height: 1.8;
+    }
+
+    .api-item {
+      background: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      border-radius: 14px;
+      padding: 14px;
+      margin-bottom: 12px;
+    }
+
+    .api-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .api-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 4px;
+    }
+
+    .api-tag {
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 6px;
+      background: var(--primary-light);
+      color: var(--primary);
+    }
+
+    .api-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+
+    /* Les adresses URL restent de gauche à droite même dans une page RTL */
+    .api-endpoint {
+      direction: ltr;
+      text-align: left;
+      background: #FFFFFF;
+      border: 1px solid #CBD5E1;
+      border-radius: 8px;
+      padding: 8px 10px;
+      font-family: 'Fira Code', monospace;
+      font-size: 11.5px;
+      color: #0F172A;
+      word-break: break-all;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .api-endpoint a {
+      color: var(--blue);
+      text-decoration: none;
+      word-break: break-all;
+    }
+
+    .api-endpoint a:hover {
+      text-decoration: underline;
+    }
+
+    .sm2-badge-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .sm2-pill {
+      padding: 8px 12px;
+      border-radius: 10px;
+      font-size: 12.5px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .pill-again { background: #FEE2E2; color: #991B1B; }
+    .pill-hard { background: #FEF3C7; color: #92400E; }
+    .pill-good { background: #DCFCE7; color: #166534; }
+    .pill-perfect { background: #FEF9C3; color: #854D0E; }
+
+    footer {
+      text-align: center;
+      padding: 20px 0 10px;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>الخوارزميات وواجهات البرمجة المستخدمة</h1>
+      <div class="subtitle">توثيق لمصادر البيانات وللخوارزمية التعليمية المستخدمة في الحفظ</div>
+    </header>
+
+    <!-- القسم 1 : SM-2 -->
+    <div class="card">
+      <div class="card-header">
+        <div class="icon-box green">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4.35 19.4c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l1.9-1.9C9.22 19.59 10.57 20 12 20c4.97 0 9-4.03 9-9s-4.03-9-9-9zm0 15c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z"/></svg>
+        </div>
+        <h2>خوارزمية الحفظ SM-2</h2>
+      </div>
+      <p>
+        لتحسين الوقت المخصص لتعلّم القرآن الكريم وتفادي النسيان، يدمج التطبيق خوارزمية <strong>SuperMemo-2 (SM-2)</strong> المبنية على منحنى النسيان لهيرمان إبنغهاوس.
+      </p>
+      <p>
+        لكل صفحة <strong>معامل السهولة (EF)</strong> و<strong>فترة المراجعة (I)</strong> الخاصّان بها، ويُعاد حسابهما تلقائيًا بعد كل جلسة بحسب تقييمك الذاتي وعدد المراجعات المتراكمة لهذه الصفحة:
+      </p>
+
+      <div class="sm2-badge-grid">
+        <div class="sm2-pill pill-again">🔴 للمراجعة (تُعاد الفترة إلى يوم واحد)</div>
+        <div class="sm2-pill pill-hard">🟠 صعب (فترة قصيرة)</div>
+        <div class="sm2-pill pill-good">🟢 جيد (فترة منتظمة)</div>
+        <div class="sm2-pill pill-perfect">⭐ ممتاز (فترة طويلة)</div>
+      </div>
+      <br>
+      <p>تعتمد مواعيد إشعارات المراجعة التي تتلقاها على الفترات المحسوبة لكل صفحة.</p>
+    </div>
+
+    <!-- القسم 2 : واجهات البرمجة ومصادر البيانات -->
+    <div class="card">
+      <div class="card-header">
+        <div class="icon-box">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM19 18H6c-2.21 0-4-1.79-4-4 0-2.05 1.53-3.76 3.56-3.97l1.07-.11.5-.95C8.08 7.14 9.94 6 12 6c2.62 0 4.88 1.86 5.39 4.43l.3 1.5 1.53.11c1.56.1 2.78 1.41 2.78 2.96 0 1.65-1.35 3-3 3z"/></svg>
+        </div>
+        <h2>واجهات البرمجة والبيانات النصية والصوتية</h2>
+      </div>
+      <p>
+        تعتمد أصالة النصوص المقدسة ودقّتها على قواعد بيانات مفتوحة، موثّقة ومعترف بها من المجتمع:
+      </p>
+
+      <!-- 1. UmmahAPI -->
+      <div class="api-item">
+        <div class="api-title">
+          <span>UmmahAPI</span>
+          <span class="api-tag">حفص • ترجمة • نقل حرفي</span>
+        </div>
+        <div class="api-desc">
+          توفّر النص العربي برواية حفص (الرسم العثماني)، والنقل الصوتي بالأحرف اللاتينية، والترجمات بعدة لغات.
+        </div>
+        <div class="api-endpoint">
+          <a href="https://ummahapi.com/api/quran/" target="_blank" rel="noopener">https://ummahapi.com/api/quran/</a>
+        </div>
+      </div>
+
+      <!-- 2. Fawaz Ahmed Quran API (ورش) -->
+      <div class="api-item">
+        <div class="api-title">
+          <span>Fawaz Ahmed Quran API</span>
+          <span class="api-tag">ورش حسب الصفحة (604)</span>
+        </div>
+        <div class="api-desc">
+          توزيع عبر شبكة CDN لصفحات المصحف الـ604 برواية <strong>ورش عن نافع</strong> (الخاصة بالمغرب العربي وغرب أفريقيا).
+        </div>
+        <div class="api-endpoint">
+          <a href="https://cdn.jsdelivr.net/gh/fawazahmed0/quran-api@1/editions/ara-quranwarsh/pages/1.json" target="_blank" rel="noopener">https://cdn.jsdelivr.net/gh/fawazahmed0/quran-api@1/editions/ara-quranwarsh/pages/$page.json</a>
+        </div>
+      </div>
+
+      <!-- 3. EveryAyah.com -->
+      <div class="api-item">
+        <div class="api-title">
+          <span>EveryAyah</span>
+          <span class="api-tag">صوت آية بآية</span>
+        </div>
+        <div class="api-desc">
+          منصة صوتية توفّر تلاوات متزامنة آية بآية بصيغة MP3 (الشيخ ياسين الجزائري، الشيخ إبراهيم الدوسري، وغيرهما).
+        </div>
+        <div class="api-endpoint">
+          <a href="https://everyayah.com" target="_blank" rel="noopener">https://everyayah.com</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- القسم 3 : جلسة الصوت والمكالمات -->
+    <div class="card">
+      <div class="card-header">
+        <div class="icon-box gold">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        </div>
+        <h2>المقاطعة المحترمة للمكالمات</h2>
+      </div>
+      <p>
+        يستخدم التطبيق مكوّنات نظام Android (<code>PhoneState</code> و<code>RealVolume</code>) لكتم رنين الهاتف بمجرد اكتشاف مكالمة واردة، لتتمكن الآية الجارية من الانتهاء دون انقطاع مفاجئ لكلام الله. <br>
+        وعند انتهاء الآية، يُوقَف الصوت مؤقتًا ويُعاد رنين الهاتف.
+      </p>
+    </div>
+
+    <footer>
+      <p>El Moudhakir • صُمّم من أجلك بواسطة IT Developers Company</p>
+    </footer>
+  </div>
+
+</body>
+</html>
